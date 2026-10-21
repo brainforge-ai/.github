@@ -1,0 +1,43 @@
+name: Feature request
+description: Suggest a check, capability, or integration for a Brainforge public repository.
+title: "[feature] "
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      placeholder: clickhouse-optimization-audit
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve
+      description: Describe the situation where the tool falls short today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like
+      description: The smallest change that would solve the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - Service health
+        - Data model and storage
+        - Ingestion and pipelines
+        - Query efficiency
+        - Data lifecycle
+        - Reporting and output
+        - Documentation
+        - Other

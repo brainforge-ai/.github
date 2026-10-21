@@ -1,0 +1,64 @@
+name: Bug report
+description: Something in a Brainforge public repository does not work as documented.
+title: "[bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include secrets, customer data, or real warehouse output in this report.
+        For a security issue, use SECURITY.md instead.
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      placeholder: clickhouse-optimization-audit
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The release or commit you ran.
+      placeholder: v1.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did it fail
+      options:
+        - Claude Code
+        - claude.ai chat
+        - Cowork
+        - CLI or script
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run ...
+        2. Select ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python and Node versions, and anything else that matters.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or output
+      description: Redact connection strings, hostnames, and personal data.
+      render: text

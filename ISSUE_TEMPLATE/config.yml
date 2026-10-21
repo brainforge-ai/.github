@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security report
+    url: https://github.com/brainforge-ai/.github/blob/main/SECURITY.md
+    about: Report a vulnerability privately. Do not open a public issue.
+  - name: Work with Brainforge
+    url: https://www.brainforge.ai/free-consultation-call
+    about: Book a call about an assessment or a delivery engagement.
